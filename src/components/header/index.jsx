@@ -9,11 +9,10 @@ const Header = () => {
         <section className="headercontainer container">
           <Logokenzie />
           <nav>
-            <ul>
-              <li>
-                <input type="text" placeholder="Digitar Pesquisa" />
-              </li>
-            </ul>
+            <form action="" className='containersearch'>
+              <input type="text" placeholder="Digitar Pesquisa" />
+              <button type="submit">Pesquisar</button>
+            </form>
           </nav>
         </section>
       </header>
