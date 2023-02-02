@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Renderprodutsdata from "../Cardproducts";
 import axios from "axios";
 
 export const Api = axios.create({
@@ -22,11 +23,9 @@ function Getdata() {
   }, []);
 
   return (
-    <div>
-      {burguerlist.map((product) => (
-        <li key={product.id}>{product.name}</li>
-      ))}
-    </div>
+    <section>
+      <Renderprodutsdata burguerlist={burguerlist} />
+    </section>
   );
 }
 
