@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Renderprodutsdata from "../Cardproducts";
+import { Renderprodutsdata } from "./Cardproducts";
+import { Container } from "./style";
 import axios from "axios";
 
 export const Api = axios.create({
@@ -7,7 +8,7 @@ export const Api = axios.create({
   timeout: 5000,
 });
 
-function Getdata() {
+export function Getdata() {
   const [burguerlist, setBurguerlist] = useState([]);
 
   useEffect(() => {
@@ -23,10 +24,8 @@ function Getdata() {
   }, []);
 
   return (
-    <section>
+    <Container>
       <Renderprodutsdata burguerlist={burguerlist} />
-    </section>
+    </Container>
   );
 }
-
-export default Getdata;

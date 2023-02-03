@@ -42,26 +42,7 @@ export const GlobalStyle = createGlobalStyle`
   --font-family: "Inter", sans-serif;
 }
 
-header {
-    width: 92vw;
-    margin: auto;
-  }
-
 body {
   font-family: var(--font-family);
-
-  width: 92vw;
-  margin: auto;
-}
-
-@media (min-widht: 1080px) {
-  header {
-    width: 64vw;
-  }
-
-  body {
-    width: 64vw;
-
-  }
 }
 `;

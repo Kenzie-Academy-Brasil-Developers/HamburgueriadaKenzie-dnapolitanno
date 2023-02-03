@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Header } from "./components/Header/index.jsx";
-import Getdata from "./components/Productslist";
-import "./App.css";
+import { Getdata } from "./components/Productslist/index.jsx";
 
-function App() {
+export function App() {
   return (
     <section className="App">
       <Header />
@@ -11,5 +10,3 @@ function App() {
     </section>
   );
 }
-
-export default App;

@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Ulcontainer } from "./style.js";
 
-function Renderprodutsdata({ burguerlist }) {
+export function Renderprodutsdata({ burguerlist }) {
   return (
-    <ul>
+    <Ulcontainer>
       {burguerlist.map((product) => (
         <li key={product.id}>
           <img src={product.img} alt="" />
@@ -12,8 +13,6 @@ function Renderprodutsdata({ burguerlist }) {
           <button>Adicionar</button>
         </li>
       ))}
-    </ul>
+    </Ulcontainer>
   );
 }
-
-export default Renderprodutsdata;

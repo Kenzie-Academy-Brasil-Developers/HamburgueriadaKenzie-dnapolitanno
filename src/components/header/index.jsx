@@ -1,6 +1,5 @@
 import React from "react";
-import Logokenzie from "../Imglogo";
-import { Headercontainer } from ".";
+import { Headercontainer } from "./style";
 
 export const Header = () => {
   return (
