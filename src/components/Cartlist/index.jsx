@@ -1,25 +1,21 @@
 import React from "react";
-// import { Emptylist } from "./Emptylist";
+import { Emptylist } from "./Emptylist";
 import { Cartcards } from "./Cartcards";
 import { Cartcontainer } from "./style";
 
-export const Cartlist = ({
-  burguerlist,
-  setBurguerlist,
-  cartburguerlist,
-  setCartburguerlist,
-}) => {
+export const Cartlist = ({ cartburguerlist, setCartburguerlist }) => {
   return (
     <>
       <Cartcontainer>
         <h4>Carrinho de compras</h4>
-        {/* <Emptylist /> */}
-        <Cartcards
-          burguerlist={burguerlist}
-          setBurguerlist={setBurguerlist}
-          cartburguerlist={cartburguerlist}
-          setCartburguerlist={setCartburguerlist}
-        />
+        {!cartburguerlist.length ? (
+          <Emptylist />
+        ) : (
+          <Cartcards
+            cartburguerlist={cartburguerlist}
+            setCartburguerlist={setCartburguerlist}
+          />
+        )}
       </Cartcontainer>
     </>
   );
