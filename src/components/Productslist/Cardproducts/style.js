@@ -93,6 +93,8 @@ export const Ulcontainer = styled.ul`
   @media (min-width: 990px) {
     flex-wrap: wrap;
 
-    overflow-x: none;
+    width: 58.75rem;
+
+    overflow-x: hidden;
   }
 `;
