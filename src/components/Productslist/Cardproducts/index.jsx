@@ -6,11 +6,20 @@ export function Renderprodutsdata({ burguerlist }) {
     <Ulcontainer>
       {burguerlist.map((product) => (
         <li key={product.id}>
-          <img src={product.img} alt="" />
-          <h3>{product.name}</h3>
-          <span>{product.category}</span>
-          <p>{product.price}</p>
-          <button>Adicionar</button>
+          <div className="containerimgcard">
+            <img src={product.img} alt="" />
+          </div>
+          <div className="containerinfocard">
+            <h3>{product.name}</h3>
+            <span>{product.category}</span>
+            <p>
+              {Math.abs(product.price).toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </p>
+            <button>Adicionar</button>
+          </div>
         </li>
       ))}
     </Ulcontainer>
