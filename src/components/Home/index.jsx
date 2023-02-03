@@ -9,7 +9,7 @@ export const Home = () => {
     <Container>
       <Productslist />
       <section>
-        <div>Carrinho de compras</div>
+          <h4>Carrinho de compras</h4>
         <Emptylist />
         <Cartlist />
       </section>
