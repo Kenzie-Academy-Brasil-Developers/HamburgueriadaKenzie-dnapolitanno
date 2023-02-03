@@ -1,23 +1,21 @@
 import React from "react";
 import Logokenzie from "../Imglogo";
-import "./index.css";
+import { Headercontainer } from ".";
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
-      <header>
-        <section className="headercontainer container">
-          <Logokenzie />
-          <nav>
-            <form action="" className='containersearch'>
-              <input type="text" placeholder="Digitar Pesquisa" />
-              <button type="submit">Pesquisar</button>
-            </form>
-          </nav>
-        </section>
-      </header>
+      <Headercontainer>
+        <h1>
+          Burguer <span>Kenzie</span>
+        </h1>
+        <nav>
+          <form action="" className="containersearch">
+            <input type="text" placeholder="Digitar Pesquisa" />
+            <button type="submit">Pesquisar</button>
+          </form>
+        </nav>
+      </Headercontainer>
     </>
   );
 };
-
-export default Header;
