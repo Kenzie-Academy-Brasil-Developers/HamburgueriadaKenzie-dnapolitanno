@@ -9,6 +9,9 @@ export const Cart = () => {
         <div>
           <h3>Carrinho de compras</h3>
         </div>
+        <div>
+            <Emptylist/>
+        </div>
       </Cartcontainer>
     </>
   );
