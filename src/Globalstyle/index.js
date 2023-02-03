@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
 
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   border: none;
   outline: none;
