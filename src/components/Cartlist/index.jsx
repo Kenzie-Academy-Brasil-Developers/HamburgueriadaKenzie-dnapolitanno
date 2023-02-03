@@ -1,5 +1,6 @@
 import React from "react";
-import { Emptylist } from "./Emptylist";
+// import { Emptylist } from "./Emptylist";
+import { Cartcards } from "./Cartcards";
 import { Cartcontainer } from "./style";
 
 export const Cartlist = () => {
@@ -7,7 +8,8 @@ export const Cartlist = () => {
     <>
       <Cartcontainer>
         <h4>Carrinho de compras</h4>
-        <Emptylist />
+        {/* <Emptylist /> */}
+        <Cartcards />
       </Cartcontainer>
     </>
   );

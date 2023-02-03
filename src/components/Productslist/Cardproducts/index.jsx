@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Ulcontainer } from "./style.js";
 
-export function Renderprodutsdata({ burguerlist }) {
+export function Renderprodutsdata({ burguerlist, addcardproduct }) {
   return (
     <Ulcontainer>
       {burguerlist.map((product) => (
@@ -18,7 +18,7 @@ export function Renderprodutsdata({ burguerlist }) {
                 currency: "BRL",
               })}
             </p>
-            <button>Adicionar</button>
+            <button onClick={() => addcardproduct(product)}>Adicionar</button>
           </div>
         </li>
       ))}

@@ -7,8 +7,13 @@ export const Api = axios.create({
   timeout: 5000,
 });
 
-export function Productslist() {
+export function Productslist({}) {
+  // if (!localStorage.data) localStorage.setItem("data", "[]");
+
   const [burguerlist, setBurguerlist] = useState([]);
+  const [cartburguerlist, setCartburguerlist] = useState(
+    JSON.parse(localStorage.data) || []
+  );
 
   useEffect(() => {
     async function renderProducts() {
@@ -22,9 +27,25 @@ export function Productslist() {
     renderProducts();
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(cartburguerlist));
+  }, [cartburguerlist]);
+
+  const addcardproduct = (newProduct) => {
+    if (!cartburguerlist.some((product) => product.id === newProduct.id)) {
+      setCartburguerlist([...burguerlist, newProduct]);
+      alert("adicionado");
+    } else {
+      alert("já possui este lanche no carrinho ");
+    }
+  };
+
   return (
     <>
-      <Renderprodutsdata burguerlist={burguerlist} />
+      <Renderprodutsdata
+        burguerlist={burguerlist}
+        addcardproduct={addcardproduct}
+      />
     </>
   );
 }
