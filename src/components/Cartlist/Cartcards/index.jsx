@@ -1,16 +1,18 @@
 import React from "react";
 
-export const Cartcards = ({
-  burguerlist,
-  setBurguerlist,
-  cartburguerlist,
-  setCartburguerlist,
-}) => {
+export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
+  const removecardprodut = (newid) => {
+    const newlistproducts = cartburguerlist.filter(
+      (product) => product.id !== newid
+    );
+    setCartburguerlist(newlistproducts);
+  };
+
   return (
     <>
       <section>
         <ul>
-          {/* {arraylist.map((productcart) => (
+          {cartburguerlist.map((productcart) => (
             <li key={productcart.name}>
               <div className="containerimgcart">
                 <img src={productcart.img} alt="" />
@@ -18,10 +20,12 @@ export const Cartcards = ({
               <div className="containerinfocart">
                 <h3>{productcart.name}</h3>
                 <span>{productcart.category}</span>
-                <button>Remover</button>
+                <button onClick={() => removecardprodut(productcart.id)}>
+                  Remover
+                </button>
               </div>
             </li>
-          ))} */}
+          ))}
         </ul>
       </section>
     </>

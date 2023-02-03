@@ -14,7 +14,12 @@ export const Cartlist = ({
       <Cartcontainer>
         <h4>Carrinho de compras</h4>
         {/* <Emptylist /> */}
-        <Cartcards />
+        <Cartcards
+          burguerlist={burguerlist}
+          setBurguerlist={setBurguerlist}
+          cartburguerlist={cartburguerlist}
+          setCartburguerlist={setCartburguerlist}
+        />
       </Cartcontainer>
     </>
   );
