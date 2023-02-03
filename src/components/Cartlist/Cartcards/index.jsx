@@ -1,4 +1,5 @@
 import React from "react";
+import { Productscartcontainer } from "./style";
 
 export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
   const removecardprodut = (newid) => {
@@ -10,24 +11,26 @@ export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
 
   return (
     <>
-      <section>
+      <Productscartcontainer>
         <ul>
           {cartburguerlist.map((productcart) => (
             <li key={productcart.name}>
-              <div className="containerimgcart">
-                <img src={productcart.img} alt="" />
+              <div>
+                <div className="containerimgcart">
+                  <img src={productcart.img} alt="" />
+                </div>
+                <div className="containerinfocart">
+                  <h3>{productcart.name}</h3>
+                  <span>{productcart.category}</span>
+                </div>
               </div>
-              <div className="containerinfocart">
-                <h3>{productcart.name}</h3>
-                <span>{productcart.category}</span>
-                <button onClick={() => removecardprodut(productcart.id)}>
-                  Remover
-                </button>
-              </div>
+              <button onClick={() => removecardprodut(productcart.id)}>
+                Remover
+              </button>
             </li>
           ))}
         </ul>
-      </section>
+      </Productscartcontainer>
     </>
   );
 };

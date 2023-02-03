@@ -7,7 +7,8 @@ export const Emptylistcontainer = styled.section`
   align-items: center;
   padding: 50px 10px;
 
-  width: 365px;
+  width: 100%;
+
   height: 158px;
 
   background: var(--color-grey-1);
@@ -33,5 +34,9 @@ export const Emptylistcontainer = styled.section`
     text-align: center;
 
     color: var(--color-grey-3);
+  }
+
+  @media (min-width: 990px) {
+    width: 365px;
   }
 `;
