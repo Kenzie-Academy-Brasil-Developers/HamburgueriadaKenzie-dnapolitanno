@@ -3,7 +3,12 @@ import React from "react";
 import { Cartcards } from "./Cartcards";
 import { Cartcontainer } from "./style";
 
-export const Cartlist = () => {
+export const Cartlist = ({
+  burguerlist,
+  setBurguerlist,
+  cartburguerlist,
+  setCartburguerlist,
+}) => {
   return (
     <>
       <Cartcontainer>

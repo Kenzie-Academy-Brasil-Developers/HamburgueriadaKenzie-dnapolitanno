@@ -3,11 +3,26 @@ import { Cartlist } from "../Cartlist";
 import { Productslist } from "../Productslist";
 import { Container } from "./style";
 
-export const Home = () => {
+export const Home = ({
+  burguerlist,
+  setBurguerlist,
+  cartburguerlist,
+  setCartburguerlist,
+}) => {
   return (
     <Container>
-      <Productslist />
-      <Cartlist />
+      <Productslist
+        burguerlist={burguerlist}
+        setBurguerlist={setBurguerlist}
+        cartburguerlist={cartburguerlist}
+        setCartburguerlist={setCartburguerlist}
+      />
+      <Cartlist
+        burguerlist={burguerlist}
+        setBurguerlist={setBurguerlist}
+        cartburguerlist={cartburguerlist}
+        setCartburguerlist={setCartburguerlist}
+      />
     </Container>
   );
 };
