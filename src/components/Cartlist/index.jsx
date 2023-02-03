@@ -7,7 +7,6 @@ export const Cartlist = () => {
     <>
       <Cartcontainer>
         <h4>Carrinho de compras</h4>
-
         <Emptylist />
       </Cartcontainer>
     </>

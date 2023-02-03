@@ -1,10 +1,11 @@
 import React from "react";
+import { Emptylistcontainer } from "./style";
 
 export const Emptylist = () => {
   return (
-    <div>
-      <h4>Sua sacola está vazia</h4>
+    <Emptylistcontainer>
+      <h5>Sua sacola está vazia</h5>
       <span>Adicione itens</span>
-    </div>
+    </Emptylistcontainer>
   );
 };
