@@ -5,6 +5,7 @@ export const Header = () => {
   return (
     <>
       <Headercontainer>
+        <section>
         <h1>
           Burguer <span>Kenzie</span>
         </h1>
@@ -14,6 +15,7 @@ export const Header = () => {
             <button type="submit">Pesquisar</button>
           </form>
         </nav>
+        </section>
       </Headercontainer>
     </>
   );
