@@ -1,18 +1,10 @@
 import React from "react";
-import Emptylist from "./Emptylist";
 import { Cartcontainer } from "./style";
 
-export const Cart = () => {
+export const Cartlist = () => {
   return (
     <>
-      <Cartcontainer>
-        <div>
-          <h3>Carrinho de compras</h3>
-        </div>
-        <div>
-            <Emptylist/>
-        </div>
-      </Cartcontainer>
+      <Cartcontainer></Cartcontainer>
     </>
   );
 };
