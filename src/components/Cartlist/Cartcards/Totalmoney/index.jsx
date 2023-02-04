@@ -2,11 +2,9 @@ import React from "react";
 import { Totalmoneycontainer } from "./style";
 
 export const Totalmoney = ({ cartburguerlist, setCartburguerlist }) => {
-  const removeallcardprodut = (newid) => {
-    const newlistproducts = cartburguerlist.filter(
-      (product) => product.id !== newid
-    );
-    setCartburguerlist(newlistproducts);
+  const removeallcardprodut = () => {
+    localStorage.clear();
+    setCartburguerlist([]);
   };
 
   return (
@@ -20,7 +18,7 @@ export const Totalmoney = ({ cartburguerlist, setCartburguerlist }) => {
           })}
         </span>
       </div>
-      <button>Remover todos</button>
+      <button onClick={() => removeallcardprodut()}>Remover todos</button>
     </Totalmoneycontainer>
   );
 };
