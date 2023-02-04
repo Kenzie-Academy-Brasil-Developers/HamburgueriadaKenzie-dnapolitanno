@@ -1,6 +1,6 @@
 import React from "react";
 import { Productscartcontainer } from "./style";
-import { Totalmoney } from './Totalmoney';
+import { Totalmoney } from "./Totalmoney";
 
 export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
   const removecardprodut = (newid) => {

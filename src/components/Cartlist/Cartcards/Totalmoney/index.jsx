@@ -6,16 +6,22 @@ export const Totalmoney = ({ cartburguerlist, setCartburguerlist }) => {
     localStorage.clear();
     setCartburguerlist([]);
   };
+  console.log(cartburguerlist);
 
   return (
     <Totalmoneycontainer>
       <div>
         <span className="total">Total</span>
         <span className="totalmoney">
-          {Math.abs().toLocaleString("pt-br", {
-            style: "currency",
-            currency: "BRL",
-          })}
+          {cartburguerlist
+            .reduce(
+              (accumulator, accumulated) => accumulator + accumulated.price,
+              0
+            )
+            .toLocaleString("pt-br", {
+              style: "currency",
+              currency: "BRL",
+            })}
         </span>
       </div>
       <button onClick={() => removeallcardprodut()}>Remover todos</button>

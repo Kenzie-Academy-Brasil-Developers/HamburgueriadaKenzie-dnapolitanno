@@ -9,6 +9,7 @@ export function App() {
   const [cartburguerlist, setCartburguerlist] = useState(
     JSON.parse(localStorageData) || []
   );
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     async function renderProducts() {
@@ -34,6 +35,8 @@ export function App() {
         setBurguerlist={setBurguerlist}
         cartburguerlist={cartburguerlist}
         setCartburguerlist={setCartburguerlist}
+        count={count}
+        setCount={setCount}
       />
     </section>
   );
