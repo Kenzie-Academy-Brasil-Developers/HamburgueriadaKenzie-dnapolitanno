@@ -6,7 +6,6 @@ export const Totalmoney = ({ cartburguerlist, setCartburguerlist }) => {
     localStorage.clear();
     setCartburguerlist([]);
   };
-  console.log(cartburguerlist);
 
   return (
     <Totalmoneycontainer>

@@ -13,18 +13,20 @@ export const Totalmoneycontainer = styled.section`
 
   div > span {
     font-weight: 600;
-    font-size: 14px;
+    font-size: var(--font-size-5);
     line-height: 24px;
 
-    color: #333333;
+    color: var(--color-grey-4);
   }
 
   .totalmoney {
     font-weight: 600;
-    font-size: 14px;
+    font-size: var(--font-size-5);
     line-height: 24px;
 
-    color: #828282;
+    color: var(--color-grey-3);
+
+    width: max-content;
   }
 
   button {
@@ -36,17 +38,17 @@ export const Totalmoneycontainer = styled.section`
     width: 100%;
     height: 60px;
 
-    background: #e0e0e0;
-    border: 2px solid #e0e0e0;
+    background: var(--color-grey-2);
+    border: 2px solid var(--color-grey-2);
     border-radius: 8px;
 
     font-weight: 600;
-    font-size: 16px;
+    font-size: var(--font-size-4);
     line-height: 19px;
 
-    color: #828282;
+    color: var(--color-grey-3);
 
-    text-decoration: none;
+    text-decoration: none;  
 
     cursor: pointer;
   }
