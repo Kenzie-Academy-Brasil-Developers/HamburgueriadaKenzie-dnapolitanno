@@ -6,17 +6,20 @@ export const Ulcontainer = styled.ul`
   width: max-content;
   gap: 1.25rem;
 
+  min-width: 300px;
+  width: 100%;
+
   margin-top: 1.875rem;
 
-  overflow-x: auto;
+  overflow: auto;
 
   li {
     width: 300px;
     height: 346px;
 
-    background: #ffffff;
+    background: var(--color-grey-0);
 
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--color-grey-2);
     border-radius: 5px;
   }
 
@@ -80,7 +83,7 @@ export const Ulcontainer = styled.ul`
     font-size: var(--font-size-5);
     line-height: 17px;
 
-    color: #ffffff;
+    color: var(--color-grey-0);
 
     background: var(--color-primary-1);
 

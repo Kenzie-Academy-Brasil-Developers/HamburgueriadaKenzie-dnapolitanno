@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const Productscartcontainer = styled.section`
-  display: flex;
-  flex-direction: column;
-
   margin-bottom: 40px;
 
   width: 100%;
@@ -12,8 +9,6 @@ export const Productscartcontainer = styled.section`
   background-color: var(--color-grey-1);
 
   ul {
-    width: 100%;
-
     padding: 10px;
   }
 
