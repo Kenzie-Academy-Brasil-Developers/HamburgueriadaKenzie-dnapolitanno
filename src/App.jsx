@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Api } from "./components/RequestApi";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 export function App() {
   const localStorageData = localStorage.getItem("data");
@@ -37,6 +40,18 @@ export function App() {
         setCartburguerlist={setCartburguerlist}
         count={count}
         setCount={setCount}
+      />
+      <ToastContainer
+        position="top-center"
+        autoClose={1800}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
       />
     </section>
   );

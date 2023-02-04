@@ -1,10 +1,12 @@
 import React from "react";
 import { Totalmoneycontainer } from "./style";
+import { toast } from "react-toastify";
 
 export const Totalmoney = ({ cartburguerlist, setCartburguerlist }) => {
   const removeallcardprodut = () => {
     localStorage.clear();
     setCartburguerlist([]);
+    toast.info("Todos os produto foram removidos do carrinho!");
   };
 
   return (

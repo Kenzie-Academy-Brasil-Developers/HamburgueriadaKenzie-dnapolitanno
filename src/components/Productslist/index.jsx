@@ -1,4 +1,5 @@
 import { Renderprodutsdata } from "./Cardproducts";
+import { toast } from "react-toastify";
 
 export function Productslist({
   burguerlist,
@@ -10,9 +11,9 @@ export function Productslist({
   const addcardproduct = (newProduct) => {
     if (!cartburguerlist.some((product) => product.id === newProduct.id)) {
       setCartburguerlist([...cartburguerlist, newProduct]);
-      alert("adicionado");
+      toast.success("Produto adicionado ao carrinho!");
     } else {
-      alert("já possui este lanche no carrinho ");
+      toast.warn("Produto já existe no carrinho!");
     }
   };
 

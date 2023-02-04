@@ -1,6 +1,7 @@
 import React from "react";
 import { Productscartcontainer } from "./style";
 import { Totalmoney } from "./Totalmoney";
+import { toast } from "react-toastify";
 
 export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
   const removecardprodut = (newid) => {
@@ -8,6 +9,7 @@ export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
       (product) => product.id !== newid
     );
     setCartburguerlist(newlistproducts);
+    toast.success("Produto removido do carrinho!");
   };
 
   return (
