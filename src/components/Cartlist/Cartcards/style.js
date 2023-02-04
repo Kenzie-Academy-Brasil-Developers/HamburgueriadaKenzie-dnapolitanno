@@ -2,18 +2,19 @@ import styled from "styled-components";
 
 export const Productscartcontainer = styled.section`
   display: flex;
+  flex-direction: column;
 
-  padding: 10px;
+  margin-bottom: 40px;
 
   width: 100%;
   heigth: max-content;
 
   background-color: var(--color-grey-1);
 
-  border-bottom: 2px solid var(--color-grey-2);
-
   ul {
     width: 100%;
+
+    padding: 10px;
   }
 
   li {

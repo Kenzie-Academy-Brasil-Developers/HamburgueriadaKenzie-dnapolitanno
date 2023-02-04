@@ -1,5 +1,6 @@
 import React from "react";
 import { Productscartcontainer } from "./style";
+import { Totalmoney } from './Totalmoney';
 
 export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
   const removecardprodut = (newid) => {
@@ -30,6 +31,10 @@ export const Cartcards = ({ cartburguerlist, setCartburguerlist }) => {
             </li>
           ))}
         </ul>
+        <Totalmoney
+          cartburguerlist={cartburguerlist}
+          setCartburguerlist={setCartburguerlist}
+        />
       </Productscartcontainer>
     </>
   );
