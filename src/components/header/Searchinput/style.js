@@ -18,6 +18,10 @@ export const Navsearch = styled.nav`
     border-radius: 8px;
   }
 
+  form:hover {
+    border: 2px solid var(--color-grey-4);
+  }
+
   input {
     font-weight: 400;
     font-size: var(--font-size-4);

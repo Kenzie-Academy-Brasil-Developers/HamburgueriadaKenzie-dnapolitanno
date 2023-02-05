@@ -57,7 +57,7 @@ export const Productscartcontainer = styled.section`
     font-size: 14px;
     line-height: 24px;
 
-    color: #333333;
+    color: var(--color-grey-4);
   }
 
   span {
@@ -67,7 +67,7 @@ export const Productscartcontainer = styled.section`
     font-size: 12px;
     line-height: 16px;
 
-    color: #828282;
+    color: var(--color-grey-3);
   }
 
   button {
@@ -79,12 +79,14 @@ export const Productscartcontainer = styled.section`
 
     color: #bdbdbd;
 
-    background-color: #f5f5f5;
+    background-color: var(--color-grey-1);
 
     cursor: pointer;
   }
 
   button:hover {
+    color: var(--color-grey-4);
+
     text-decoration: underline;
   }
 `;

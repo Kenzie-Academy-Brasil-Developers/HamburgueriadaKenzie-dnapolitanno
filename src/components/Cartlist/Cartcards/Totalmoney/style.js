@@ -48,8 +48,17 @@ export const Totalmoneycontainer = styled.section`
 
     color: var(--color-grey-3);
 
-    text-decoration: none;  
+    text-decoration: none;
 
     cursor: pointer;
+  }
+
+  button:hover {
+    background: var(--color-grey-3);
+    border: 2px solid var(--color-grey-3);
+
+    color: var(--color-grey-0);
+
+    text-decoration: none;
   }
 `;
