@@ -82,7 +82,9 @@ export const Productscartcontainer = styled.section`
     background-color: #f5f5f5;
 
     cursor: pointer;
+  }
 
+  button:hover {
     text-decoration: underline;
   }
 `;
