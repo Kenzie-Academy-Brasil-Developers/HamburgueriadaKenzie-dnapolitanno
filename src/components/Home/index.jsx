@@ -8,8 +8,8 @@ export const Home = ({
   setBurguerlist,
   cartburguerlist,
   setCartburguerlist,
-  count,
-  setCount
+  search,
+  setSearch,
 }) => {
   return (
     <Container>
@@ -18,16 +18,14 @@ export const Home = ({
         setBurguerlist={setBurguerlist}
         cartburguerlist={cartburguerlist}
         setCartburguerlist={setCartburguerlist}
-        count={count}
-        setCount={setCount}
+        search={search}
+        setSearch={setSearch}
       />
       <Cartlist
         burguerlist={burguerlist}
         setBurguerlist={setBurguerlist}
         cartburguerlist={cartburguerlist}
         setCartburguerlist={setCartburguerlist}
-        count={count}
-        setCount={setCount}
       />
     </Container>
   );

@@ -1,20 +1,16 @@
 import React from "react";
+import { Inputsearch } from "./Searchinput";
 import { Headercontainer } from "./style";
 
-export const Header = () => {
+export const Header = ({ setSearch }) => {
   return (
     <>
       <Headercontainer>
         <section>
-        <h1>
-          Burguer <span>Kenzie</span>
-        </h1>
-        <nav>
-          <form action="" className="containersearch">
-            <input type="text" placeholder="Digitar Pesquisa" />
-            <button type="submit">Pesquisar</button>
-          </form>
-        </nav>
+          <h1>
+            Burguer <span>Kenzie</span>
+          </h1>
+          <Inputsearch setSearch={setSearch} />
         </section>
       </Headercontainer>
     </>

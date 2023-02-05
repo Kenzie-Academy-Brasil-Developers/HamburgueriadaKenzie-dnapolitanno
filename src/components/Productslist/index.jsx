@@ -1,29 +1,24 @@
 import { Renderprodutsdata } from "./Cardproducts";
-import { toast } from "react-toastify";
 
 export function Productslist({
   burguerlist,
   cartburguerlist,
   setCartburguerlist,
-  count,
-  setCount,
+  search,
 }) {
-  const addcardproduct = (newProduct) => {
-    if (!cartburguerlist.some((product) => product.id === newProduct.id)) {
-      setCartburguerlist([...cartburguerlist, newProduct]);
-      toast.success("Produto adicionado ao carrinho!");
-    } else {
-      toast.warn("Produto já existe no carrinho!");
-    }
-  };
-
+  const searchproducts = burguerlist.filter((product) => {
+    return search === ""
+      ? true
+      : product.name.toLowerCase().includes(search.toLowerCase());
+  });
+  
   return (
     <>
       <Renderprodutsdata
         burguerlist={burguerlist}
-        addcardproduct={addcardproduct}
-        count={count}
-        setCount={setCount}
+        cartburguerlist={cartburguerlist}
+        setCartburguerlist={setCartburguerlist}
+        searchproducts={searchproducts}
       />
     </>
   );

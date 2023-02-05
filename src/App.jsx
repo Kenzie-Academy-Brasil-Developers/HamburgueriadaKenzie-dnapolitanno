@@ -12,7 +12,7 @@ export function App() {
   const [cartburguerlist, setCartburguerlist] = useState(
     JSON.parse(localStorageData) || []
   );
-  const [count, setCount] = useState(0);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     async function renderProducts() {
@@ -32,14 +32,14 @@ export function App() {
 
   return (
     <section className="App">
-      <Header />
+      <Header setSearch={setSearch} />
       <Home
         burguerlist={burguerlist}
         setBurguerlist={setBurguerlist}
         cartburguerlist={cartburguerlist}
         setCartburguerlist={setCartburguerlist}
-        count={count}
-        setCount={setCount}
+        search={search}
+        setSearch={setSearch}
       />
       <ToastContainer
         position="top-center"
