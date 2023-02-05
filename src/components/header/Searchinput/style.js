@@ -52,6 +52,11 @@ export const Navsearch = styled.nav`
     cursor: pointer;
   }
 
+  button:hover {
+    background: var(--color-primary-2);
+    border: 2px solid var(--color-primary-2);
+  }
+
   @media (min-width: 375px) {
     h1 {
       font-size: 1.875rem;
