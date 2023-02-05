@@ -93,6 +93,11 @@ export const Ulcontainer = styled.ul`
     cursor: pointer;
   }
 
+  button:hover {
+    background: var(--color-primary-2);
+    border: 2px solid var(--color-primary-2);
+  }
+
   @media (min-width: 990px) {
     flex-wrap: wrap;
 
